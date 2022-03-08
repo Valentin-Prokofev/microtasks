@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {FilterTask} from "../FilterTask/FilterTask";
 
-type FilterType = "all" | "dollars" | "rubles"
+export type FilterType = "all" | "dollars" | "rubles"
 
 export const Filter = () => {
 
@@ -34,22 +35,23 @@ export const Filter = () => {
 
     return (
         <>
-            <ul>
-                {currentMoney.map((objFromMoneyArr, index) => {
-                    return (
-                        <li key={index}>
-                            <span>{objFromMoneyArr.banknote}</span>
-                            <span>{objFromMoneyArr.value}</span>
-                            <span>{objFromMoneyArr.number}</span>
-                        </li>
-                    )
-                })}
-            </ul>
-            <div style={{marginLeft: "35px"}}>
-                <button onClick={() => onClickFilterHandler("all")}>all</button>
-                <button onClick={() => onClickFilterHandler("dollars")}>dollars</button>
-                <button onClick={() => onClickFilterHandler("rubles")}>rubles</button>
-            </div>
+            <FilterTask money={currentMoney} onClickFilterHandler={onClickFilterHandler}/>
+            {/*<ul>*/}
+            {/*    {currentMoney.map((objFromMoneyArr, index) => {*/}
+            {/*        return (*/}
+            {/*            <li key={index}>*/}
+            {/*                <span>{objFromMoneyArr.banknote}</span>*/}
+            {/*                <span>{objFromMoneyArr.value}</span>*/}
+            {/*                <span>{objFromMoneyArr.number}</span>*/}
+            {/*            </li>*/}
+            {/*        )*/}
+            {/*    })}*/}
+            {/*</ul>*/}
+            {/*<div style={{marginLeft: "35px"}}>*/}
+            {/*    <button onClick={() => onClickFilterHandler("all")}>all</button>*/}
+            {/*    <button onClick={() => onClickFilterHandler("dollars")}>dollars</button>*/}
+            {/*    <button onClick={() => onClickFilterHandler("rubles")}>rubles</button>*/}
+            {/*</div>*/}
         </>
     );
 };
