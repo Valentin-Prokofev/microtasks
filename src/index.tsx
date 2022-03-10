@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {NewApp} from "./useState/NewApp";
 import {Filter} from "./Filter/Filter";
 import {FilterTask} from "./FilterTask/FilterTask";
+import {Input} from "./Input/Input";
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -28,9 +29,16 @@ import {FilterTask} from "./FilterTask/FilterTask";
 //     document.getElementById('root')
 // );
 
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <Filter />
+//     </React.StrictMode>,
+//     document.getElementById('root')
+// );
+
 ReactDOM.render(
     <React.StrictMode>
-        <Filter />
+        <Input/>
     </React.StrictMode>,
     document.getElementById('root')
 );
